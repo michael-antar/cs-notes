@@ -1,23 +1,51 @@
 # Spring
 
-The industry standard for managing the lifecycle of objects through [dependency injection](../Dependency_Injection.md). It is an **open source library** maintained by Broadcom.
+The industry standard for building Enterprise Java applications. It is an **open source library** maintained by VMware (Broadcom).
 
 **See Also**:
 
-- [Spring Boot](./Spring_Boot.md): An "opinionated" version of Spring, pre-configured with default settings.
-- [Spring Cloud](./Spring_Cloud.md):
+- [Spring Boot](./Spring_Boot.md): An _"opinionated"_ version of Spring that comes _pre-configured_ with embedded servers (Tomcat) so you can "just run" the app.
+- [Spring Cloud](./Spring_Cloud.md): A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
 
 ## Annotations
 
-_Metadata tags_ used in Java code to configure the framework.
+_Metadata tags_ (`@Symbol`) that tell Spring how to treat a class or method.
+
+1. **Structural Annotations**:
+   These tell Spring **"Create an instance of this class and manage it"**
+
+   - `@Component`: The generic "catch-all" annotation. Any class with this becomes a **bean**
+   - `@Service`: A specialized version of `@Component` for **business logic**
+     - Use this layer for _calculations, validation, and calling other APIs_
+   - `@Repository`: A specialized version of `@Component` for **database access**
+     - It catches database-specific errors (like SQL exceptions) and translates them into clean Spring exceptions
+   - `@RestController`: A specialized veresion of `@Component` for **web APIs**
+     - It combines `@Controller` (Web) + `@ResponseBody` (JSON return type)
+   - `@Configuration`: Defines a class that is a source of bean definitions (used to setup 3rd part libraries)
+
+2. **Behavioral Annotations**:
+   These tell Spring **"Do something specific to this existing object"**
+
+   - `@Autowired`: Tells Spring to find a Bean (Dependency) and inject it here
+   - `@Transactional`: Wraps a method in a "Database Transaction". If the method fails, all database changes inside it are **rolled back**
+   - `@Bean`: Used _inside_ a `@Configuration` class. It tells Spring, "Take the return value of this method and manage it as a Bean"
+     - _Use case_: When you need to ues a class from an external library (like Gson) and can't add `@Component` to its source code
+
+## Components & Beans
+
+A **bean** is simply a Java Object that is instatiated, assembled, and managed by the **Spring IoC Container**
+
+- **Default Scope**: **Singleton**. Spring creates **ONLY ONE** instance of the object and reuses it for the entire application.
+
+The **component** is the "engine" of Spring. It scans your code for `@Component`, creates the Beans, and wires them together using Dependency Injection.
 
 ## Dependency Injection
 
 At its core, Spring follows the _principle_ of **Inversion of Control (IoC)** (Instead of your code controlling the flow, the Framework controls the flow) through the _pattern_ of **Dependency Injection (DI)** (Injecting objects into constructors or variables).
 
 ```java
-@RestController
-public class ThermostatController {
+@Service
+public class ThermostatService {
     @Autowired
     private TemperatureService service;
 
@@ -26,8 +54,6 @@ public class ThermostatController {
     }
 }
 ```
-
-## Components
 
 ## MVC Architecture
 
