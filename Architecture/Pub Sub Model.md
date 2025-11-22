@@ -1,0 +1,1 @@
+A _messaging pattern_ that decouples message senders (publishers) from receivers (subscribers).
