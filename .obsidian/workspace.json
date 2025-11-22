@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "56d3e1f3d985471c",
+        "id": "3e9478625a151b2b",
         "type": "tabs",
         "children": [
           {
-            "id": "f9bc773ac3066864",
+            "id": "3ec6993a7782fdec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Architecture/Scenarios.md",
+                "file": "Architecture/Kafka.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Scenarios"
+              "title": "Kafka"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Architecture/Scenarios.md",
+                "file": "Architecture/Kafka.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Scenarios"
+              "title": "Backlinks for Kafka"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Architecture/Scenarios.md",
+                "file": "Architecture/Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Scenarios"
+              "title": "Outgoing links from Kafka"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Architecture/Scenarios.md",
+                "file": "Architecture/Kafka.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Scenarios"
+              "title": "Outline of Kafka"
             }
           }
         ],
@@ -184,12 +184,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "f9bc773ac3066864",
+  "active": "3ec6993a7782fdec",
   "lastOpenFiles": [
-    "Architecture/Scenarios.md",
+    "Architecture/Kubernetes (K8s).md",
+    "Java/JVM.md",
+    "Java/Arrays.md",
     "Architecture/Load_Balancer.md",
+    "Architecture/Scenarios.md",
+    "Architecture/Kafka.md",
     "Dependency_Injection.md",
-    "Home.md",
-    "Kafka.md"
+    "Home.md"
   ]
 }
