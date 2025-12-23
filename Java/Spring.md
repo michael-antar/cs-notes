@@ -4,8 +4,8 @@ The industry standard for building Enterprise Java applications. It is an **open
 
 **See Also**:
 
-- [Spring Boot](./Spring_Boot.md): An _"opinionated"_ version of Spring that comes _pre-configured_ with embedded servers (Tomcat) so you can "just run" the app.
-- [Spring Cloud](./Spring_Cloud.md): A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
+- [Spring Boot](Spring%20Boot.md): An _"opinionated"_ version of Spring that comes _pre-configured_ with embedded servers (Tomcat) so you can "just run" the app.
+- [Spring Cloud](Spring%20Cloud.md): A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
 
 ## Annotations
 
@@ -48,7 +48,7 @@ At its core, Spring follows the _principle_ of **Inversion of Control (IoC)** (I
 public class ThermostatService {
     @Autowired
     private TemperatureService service;
-
+	
     public void setTemp(int degrees) {
         service.updateHardware(degrees);
     }
@@ -70,10 +70,10 @@ Spring uses the MVC architecture to build APIs:
 // --- THE CONTROLLER (C) ---
 @RestController
 public class DeviceController {
-
+	
     @Autowired
     private DeviceService service;
-
+	
     @GetMapping("/device/{id}")
     public Device getDevice(@PathVariable String id) {
         return service.findDevice(id);
