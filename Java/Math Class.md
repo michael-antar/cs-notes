@@ -1,5 +1,3 @@
-# Math Class
-
 Static helper methods called with `Math.methodName()`.
 
 - `.max(a, b)`: Returns the larger of two numbers.
