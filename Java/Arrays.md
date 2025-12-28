@@ -1,5 +1,3 @@
-## Arrays Class
-
 Performs actions on primitive arrays (like `int[]`, `char[]`). Called with `Arrays.methodName()`.
 
 - `.sort(arr)`: Sorts the array in place.
