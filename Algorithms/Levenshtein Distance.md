@@ -1,3 +1,5 @@
+[Wiki](https://en.wikipedia.org/wiki/Levenshtein_distance)
+
 An algorithm for measuring the distance between two strings. It returns the minimum number of single-character edits to change one word to another.
 ## Core Concept
 The algorithm calculates the distance based on *three allowable operations*. Each operation has a "cost" of 1.
