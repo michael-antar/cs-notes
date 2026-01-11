@@ -3,10 +3,8 @@ The industry standard for building Enterprise Java applications. It is an **open
 **See Also**:
 - [Spring Boot](Spring%20Boot.md): An _"opinionated"_ version of Spring that comes _pre-configured_ with embedded servers (Tomcat) so you can "just run" the app.
 - [Spring Cloud](Spring%20Cloud.md): A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
-
 ## Annotations
 _Metadata tags_ (`@Symbol`) that tell Spring how to treat a class or method.
-
 ### Structural Annotations
 These tell Spring *"Create an instance of this class and manage it"*
 
@@ -18,9 +16,8 @@ These tell Spring *"Create an instance of this class and manage it"*
 - `@RestController`: A specialized version of `@Component` for **web APIs**
 	- It combines `@Controller` (Web) + `@ResponseBody` (JSON return type)
 - `@Configuration`: Defines a class that is a source of bean definitions (used to setup 3rd part libraries)
-
 ### Behavioral Annotations
-These tell Spring **"Do something specific to this existing object"**
+These tell Spring *"Do something specific to this existing object"*
 
 - `@Autowired`: Tells Spring to find a Bean (Dependency) and inject it here
 - `@Transactional`: Wraps a method in a "Database Transaction". If the method fails, all database changes inside it are **rolled back**
@@ -31,9 +28,8 @@ These tell Spring **"Do something specific to this existing object"**
 A **bean** is simply a Java Object that is instantiated, assembled, and managed by the **Spring IoC Container**
 - *Default Scope*: **Singleton**. Spring creates *ONLY ONE* instance of the object and reuses it for the entire application.
 
-The **component** is the "engine" of Spring. It scans your code for `@Component`, creates the Beans, and wires them together using Dependency Injection.
-
-## Dependency Injection
+The **component** is the "engine" of Spring. It scans your code for `@Component`, creates the Beans, and wires them together using *Dependency Injection*.
+### Dependency Injection
 At its core, Spring follows the _principle_ of **Inversion of Control (IoC)** (Instead of your code controlling the flow, the Framework controls the flow) through the _pattern_ of **Dependency Injection (DI)** (Injecting objects into constructors or variables).
 
 ```java
