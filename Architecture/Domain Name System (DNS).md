@@ -8,14 +8,14 @@ If not first found in the *cache*, the process of finding the record follows *4 
 ## Record Types
 Any domain can hold almost any record type, and often hold many types simultaneously. 
 
-| Record Type | Description                                                         | Example Use                                                                    |
-| ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| A           | **Address**: IPv4 address                                           | `example.com` -> `93.184.216.3                                                 |
-| AAAA        | **Quad A**: IPv6 address                                            | `example.com` -> `2606:2800:220.                                               |
-| CNAME       | **Canonical Name**: An alias to another domain                      | `www.example.com` -> `example.                                                 |
-| MX          | **Mail Exchange**: Directs emails to a mail server                  | `user@example.com` goes to Gmail se                                      s     |
-| TXT         | **Text**: Stores text notes, often used for verification (security) | Verifying you own a domain for Goog                                     AWS    |
-| NS          | **Nameserver**: Lists which servers are authoritative for a do TLD server  says to use `NS ns1.google.com` to find the IP address for google e.com`  |
+| Record Type | Description                                                                                                                                         | Example Use                                                                 |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| **A**       | **Address**: IPv4 address                                                                                                                           | `example.com` -> `93.184.216.3                                              |
+| **AAAA**    | **Quad A**: IPv6 address                                                                                                                            | `example.com` -> `2606:2800:220.                                            |
+| **CNAME**   | **Canonical Name**: An alias to another domain                                                                                                      | `www.example.com` -> `example.                                              |
+| **MX**      | **Mail Exchange**: Directs emails to a mail server                                                                                                  | `user@example.com` goes to Gmail se                                      s  |
+| **TXT**     | **Text**: Stores text notes, often used for verification (security)                                                                                 | Verifying you own a domain for Goog                                     AWS |
+| **NS**      | **Nameserver**: Lists which servers are authoritative for a do TLD server  says to use `NS ns1.google.com` to find the IP address for google e.com` |                                                                             |
 
 The one exception is that if a domain has a CNAME (alias), it cannot have any other record types for that same domain.
 

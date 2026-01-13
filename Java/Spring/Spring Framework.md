@@ -1,8 +1,8 @@
-The industry standard for building Enterprise Java applications. It is an **open source library** maintained by VMware (Broadcom).
+Open-source [[Java]] framework for enterprise applications.
 
 **See Also**:
-- [Spring Boot](Spring%20Boot.md): An _"opinionated"_ version of Spring that comes _pre-configured_ with embedded servers (Tomcat) so you can "just run" the app.
-- [Spring Cloud](Spring%20Cloud.md): A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
+- [[Spring Boot]]: An *"opinionated"* version of Spring that comes *pre-configured* with packages.
+- [[Spring Cloud]]: A collection of tools (Gateway, Circuit Breaker, Config Server) to manage communication between **microservices**.
 ## Annotations
 _Metadata tags_ (`@Symbol`) that tell Spring how to treat a class or method.
 ### Structural Annotations
@@ -15,7 +15,7 @@ These tell Spring *"Create an instance of this class and manage it"*
 	- It catches database-specific errors (like SQL exceptions) and translates them into clean Spring exceptions
 - `@RestController`: A specialized version of `@Component` for **web APIs**
 	- It combines `@Controller` (Web) + `@ResponseBody` (JSON return type)
-- `@Configuration`: Defines a class that is a source of bean definitions (used to setup 3rd part libraries)
+- `@Configuration`: Defines a class that is a source of bean definitions (used to setup 3rd party libraries)
 ### Behavioral Annotations
 These tell Spring *"Do something specific to this existing object"*
 
