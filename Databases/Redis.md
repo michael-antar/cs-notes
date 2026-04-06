@@ -1,3 +1,4 @@
+#Databases #Backend #Architecture
 (**Remote Dictionary Server**) An **in-memory Key-Value store** used as a _database, cache, and message broker_.
 
 It falls under the _Key-Value store_ category of [[NoSQL]]. It is a giant, global [[Hash Map]]. Every piece of data has a unique ID (Key), and you use that ID to find it. You cannot "search" by value (e.g., you can't easily say `SELECT * WHERE name=John`). _You must know the key_.

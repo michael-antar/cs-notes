@@ -1,3 +1,4 @@
+#Backend #Architecture
 A *distributed event streaming platform* that handles high-throughput, real-time data feeds.
 
 It is a **distributed commit log**:
