@@ -23,3 +23,4 @@ The way you use SDD depends on whether you use it for greenfielding or brownfiel
 **Greenfielding** is often easier since you have 0 initial context to manage. AI is very quick to suggest refactors and changes to existing systems, so letting it start from scratch ensures that it already keeps track of all the design choices and can note edge cases along the way.
 
 ## Popular Tools
+- OpenSpec
