@@ -22,5 +22,12 @@ The way you use SDD depends on whether you use it for greenfielding or brownfiel
 
 **Greenfielding** is often easier since you have 0 initial context to manage. AI is very quick to suggest refactors and changes to existing systems, so letting it start from scratch ensures that it already keeps track of all the design choices and can note edge cases along the way.
 
+**Brownfielding** is considered harder because the "spec" is often missing or outdated. Applying the standard greenfielding approach would likely lead to the AI rewriting or naively refactoring large pieces of legacy code, not being aware of hidden or complex dependencies. In order you adapt it for brownfielding, you should:
+1. *Context Extraction*: Use tools like ==TODO== to map the dependency graph of the relevant module
+2. *Baseline Spec*: Ask the AI to create a formal spec describing the *current* behavior of a module
+3. *Delta Spec*: Edit the generated spec to reflect your desired changes. Now the AI is aware of the "before" and "after" context, reducing the risk of breaking existing logic
+
+When performing brownfielding, it's recommended to use a *"spec-anchored"* tool (like Intent or OpenSpec) that maintains a "living spec", helping keep a memory of changes over time and remain consistent.
+
 ## Popular Tools
 - OpenSpec
