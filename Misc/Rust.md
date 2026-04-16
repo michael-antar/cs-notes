@@ -7,7 +7,10 @@ Its primary goal is to achieve the raw performance and *low-level memory control
 Rust relies on a few fundamental concepts to replace traditional memory management.
 
 ### Ownership & Borrowing
-
+Instead of having a GC or manually allocating/freeing memory (like `malloc`/`free`), Rust enforces a set of *rules* using a component called the **Borrow Checker**.
+1. Each value in Rust has a variable called its *owner*
+2. There can only be *one owner* at a time
+3. When the owner goes out of scope, the value is immediately dropped from memory.
 ### No Nulls, No Exceptions
 
 ### Traits
