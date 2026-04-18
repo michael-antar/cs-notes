@@ -12,7 +12,8 @@ Instead of having a GC or manually allocating/freeing memory (like `malloc`/`fre
 2. There can only be *one owner* at a time
 3. When the owner goes out of scope, the value is immediately dropped from memory.
 
-If you need to *share data* across your program, you "borrow" it using **references** (`&`)
+If you need to *share data* across your program, you "borrow" it using **references** (`&`).
+Rust enforces that you either have *one mutable reference* to a piece OR *any number of immutable references*.
 ### No Nulls, No Exceptions
 
 ### Traits
