@@ -15,6 +15,6 @@ Instead of having a GC or manually allocating/freeing memory (like `malloc`/`fre
 If you need to *share data* across your program, you "borrow" it using **references** (`&`).
 Rust enforces that you either have *one mutable reference* to a piece OR *any number of immutable references*.
 ### No Nulls, No Exceptions
-
+Rust removes the concept of `null` and traditional `try/catch` exception handling.
 ### Traits
 
